@@ -3,6 +3,8 @@ class Idea < ActiveRecord::Base
 
   validates_presence_of :description, :title
 
+  belongs_to :project
+
   def upvote!
     self.votes += 1
     save
