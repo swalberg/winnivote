@@ -10,4 +10,8 @@ class Idea < ActiveRecord::Base
     save
   end
 
+  def project_name
+    project ? project.name : ""
+  end
+
 end
