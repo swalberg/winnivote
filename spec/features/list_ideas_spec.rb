@@ -21,7 +21,7 @@ feature "List proposed ideas in order to vote", :js do
   context "When there are ideas to list" do
     
     let!(:expected) do
-      FactoryGirl.create_list(:idea, 10).map do |idea| 
+      FactoryGirl.create_list(:idea, 10, :with_project).map do |idea| 
         idea_to_hash idea
       end
     end

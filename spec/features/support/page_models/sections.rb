@@ -25,6 +25,7 @@ module PageModels
     element :upvote_image, "div.upvote img"
     element :title, "h3.title"
     element :description, "div.description"
+    element :project, "div.project"
   end
 
   class IdeasList < SitePrism::Section
@@ -36,6 +37,7 @@ module PageModels
         { 
           title: idea.title.text, 
           description: idea.description.text,
+          project: idea.project.text
         }
       end
     end
