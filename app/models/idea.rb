@@ -1,5 +1,5 @@
 class Idea < ActiveRecord::Base
-  attr_accessible :description, :title
+  attr_accessible :description, :title, :project_id
 
   validates_presence_of :description, :title
 
